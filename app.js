@@ -1,0 +1,1 @@
+console.log('Why is sand so optimistic? It has a can-dune attitude');
