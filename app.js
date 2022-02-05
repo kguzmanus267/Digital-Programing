@@ -1,23 +1,18 @@
-let life = 100; // global
+var functions = [loseRed, winGreen];
 
-const hit = 10; 
+function loseRed () {
+    document.body.style.backgroundColor ='red';
+    console.log("LOSE");
+}
 
-if (life == 100) {
-    let life = 100;
-    console.log(life);
-}//block
+function winGreen(){
+    document.body.style.backgroundColor = 'green';
+    document.body.style.color = 'white';
+    console.log("WIN");
+}
 
-if (life != 100) {
-    let life = 0;
-    console.log(life);
-} //block
+function randomize(n) {
+     return [Math.floor(Math.random()*n)];
+}
 
-life = life - hit;
-
-life = life - hit;
-
-var name = "life";
-
-console.log(life);
-
-
+functions[randomize(functions.length)]();
