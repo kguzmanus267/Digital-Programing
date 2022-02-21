@@ -13,9 +13,9 @@ document.addEventListener('keydown' , function (righty) {
            break;
            };
 
- var directionChoices = {righty, lefty};
+ var directionChoices = [righty, lefty];
 
-var randomize = Math.floor(Math.random()*directionChoices.length);
+var randomize = directionChoices[Math.floor(Math.random()*directionChoices.length)];
 
   if (randomize) {winGreen();
 } else {loseRed();
@@ -24,14 +24,28 @@ var functions = {loseRed, winGreen};
 
 function loseRed () {
     document.body.style.backgroundColor ='red';
+    h3 = document.createElement("h3");
+    document.querySelector("body").appendChild(h3);
+    h3.innerHTML="Try Again";
     console.log("LOSE");
 }
 
 function winGreen(){
     document.body.style.backgroundColor = 'green';
     document.body.style.color = 'white';
+    h3 = document.createElement("h3");
+    document.querySelector("body").appendChild(h3);
+    h3.innerHTML="You Did It";
     console.log("WIN");
     
 
 
-}})});
+for (directionChoice of directionChoices) {console.log ("Refresh to play again.")};
+
+for(random of randomize) if (randomize === loseRed) {console.log("You picked the wrong way")};
+
+
+while (lefty, righty < 2) {
+    console.log("Play again?");
+
+}}})});;;
